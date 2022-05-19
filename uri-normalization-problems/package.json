@@ -1,23 +1,31 @@
 {
-	"name": "code-action-demo",
-	"displayName": "code-action-demo",
-	"description": "tests-code-action-provider-with-args",
+	"name": "uri-normalization-problems",
+	"displayName": "uri-normalization-problems",
+	"description": "Demonstrate problems with URI normalization in Theia",
 	"version": "0.0.1",
 	"engines": {
-		"vscode": "^1.65.0"
+		"vscode": "^1.67.0"
 	},
 	"categories": [
 		"Other"
+	],
+	"activationEvents": [
+		"onCommand:uri-normalization-problems.open-and-reveal"
 	],
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/colin-grant-work/demo-extensions.git"
 	},
-	"activationEvents": [
-		"onLanguage:plaintext"
-	],
 	"main": "./out/extension.js",
-	"contributes": {},
+	"contributes": {
+		"commands": [
+			{
+				"command": "uri-normalization-problems.open-and-reveal",
+				"title": "Open document and reveal range",
+				"category": "VSCode API"
+			}
+		]
+	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./",
@@ -27,7 +35,7 @@
 		"test": "node ./out/test/runTest.js"
 	},
 	"devDependencies": {
-		"@types/vscode": "^1.65.0",
+		"@types/vscode": "^1.67.0",
 		"@types/glob": "^7.2.0",
 		"@types/mocha": "^9.0.0",
 		"@types/node": "14.x",
