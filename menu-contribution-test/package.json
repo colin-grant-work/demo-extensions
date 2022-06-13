@@ -1,0 +1,260 @@
+{
+	"name": "menu-contribution-test",
+	"displayName": "menu-contribution-test",
+	"publisher": "colin-grant",
+	"description": "Tests the correctness of menu contributions in Theia.",
+	"version": "0.0.1",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/colin-grant-work/demo-extensions.git"
+	},
+	"engines": {
+		"vscode": "^1.68.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"main": "./out/extension.js",
+	"activationEvents": [
+		"onCommand:menu-contribution-test.comments-comment-context",
+		"onCommand:menu-contribution-test.comments-comment-title",
+		"onCommand:menu-contribution-test.comments-commentThread-context",
+		"onCommand:menu-contribution-test.debug-callstack-context",
+		"onCommand:menu-contribution-test.editor-context",
+		"onCommand:menu-contribution-test.editor-title",
+		"onCommand:menu-contribution-test.editor-title-context",
+		"onCommand:menu-contribution-test.explorer-context",
+		"onCommand:menu-contribution-test.scm-resourceFolder-context",
+		"onCommand:menu-contribution-test.scm-resourceGroup-context",
+		"onCommand:menu-contribution-test.scm-resourceState-context",
+		"onCommand:menu-contribution-test.scm-title",
+		"onCommand:menu-contribution-test.timeline-item-context",
+		"onCommand:menu-contribution-test.view-item-context",
+		"onCommand:menu-contribution-test.view-title",
+		"onCommand:menu-contribution-test.menu-contribution-test.submenu",
+		"onCommand:menu-contribution-test.thumbsDown",
+		"onCommand:menu-contribution-test.thumbsUp"
+	],
+	"contributes": {
+		"commands": [
+			{
+				"command": "menu-contribution-test.comments-comment-context",
+				"title": "Appears in: comments/comment/context",
+				"icon": "$(beaker)"
+			},
+			{
+				"command": "menu-contribution-test.comments-comment-title",
+				"title": "Appears in: comments/comment/title",
+				"icon": "$(beaker)"
+			},
+			{
+				"command": "menu-contribution-test.comments-commentThread-context",
+				"title": "Appears in: comments/commentThread/context",
+				"icon": "$(beaker)"
+			},
+			{
+				"command": "menu-contribution-test.debug-callstack-context",
+				"title": "Appears in: debug/callstack/context",
+				"icon": "$(beaker)"
+			},
+			{
+				"command": "menu-contribution-test.editor-context",
+				"title": "Appears in: editor/context",
+				"icon": "$(beaker)"
+			},
+			{
+				"command": "menu-contribution-test.editor-title",
+				"title": "Appears in: editor/title",
+				"icon": "$(beaker)"
+			},
+			{
+				"command": "menu-contribution-test.editor-title-context",
+				"title": "Appears in: editor/title/context",
+				"icon": "$(beaker)"
+			},
+			{
+				"command": "menu-contribution-test.explorer-context",
+				"title": "Appears in: explorer/context",
+				"icon": "$(beaker)"
+			},
+			{
+				"command": "menu-contribution-test.scm-resourceFolder-context",
+				"title": "Appears in: scm/resourceFolder/context",
+				"icon": "$(beaker)"
+			},
+			{
+				"command": "menu-contribution-test.scm-resourceGroup-context",
+				"title": "Appears in: scm/resourceGroup/context",
+				"icon": "$(beaker)"
+			},
+			{
+				"command": "menu-contribution-test.scm-resourceState-context",
+				"title": "Appears in: scm/resourceState/context",
+				"icon": "$(beaker)"
+			},
+			{
+				"command": "menu-contribution-test.scm-title",
+				"title": "Appears in: scm/title",
+				"icon": "$(beaker)"
+			},
+			{
+				"command": "menu-contribution-test.timeline-item-context",
+				"title": "Appears in: timeline/item/context",
+				"icon": "$(beaker)"
+			},
+			{
+				"command": "menu-contribution-test.view-item-context",
+				"title": "Appears in: view/item/context",
+				"icon": "$(beaker)"
+			},
+			{
+				"command": "menu-contribution-test.view-title",
+				"title": "Appears in: view/title",
+				"icon": "$(beaker)"
+			},
+			{
+				"command": "menu-contribution-test.menu-contribution-test.submenu",
+				"title": "Appears in: menu-contribution-test.submenu",
+				"icon": "$(beaker)"
+			},
+			{
+				"command": "menu-contribution-test.thumbsDown",
+				"title": "Make the thumb point down",
+				"icon": "$(thumbsup)"
+			},
+			{
+				"command": "menu-contribution-test.thumbsUp",
+				"title": "Make the thumb point up",
+				"icon": "$(thumbsdown)"
+			}
+		],
+		"menus": {
+			"comments/comment/context": [
+				{
+					"command": "menu-contribution-test.comments-comment-context"
+				}
+			],
+			"comments/comment/title": [
+				{
+					"command": "menu-contribution-test.comments-comment-title"
+				}
+			],
+			"comments/commentThread/context": [
+				{
+					"command": "menu-contribution-test.comments-commentThread-context"
+				}
+			],
+			"debug/callstack/context": [
+				{
+					"command": "menu-contribution-test.debug-callstack-context"
+				}
+			],
+			"editor/context": [
+				{
+					"command": "menu-contribution-test.editor-context"
+				}
+			],
+			"editor/title": [
+				{
+					"command": "menu-contribution-test.editor-title"
+				}
+			],
+			"editor/title/context": [
+				{
+					"command": "menu-contribution-test.editor-title-context"
+				}
+			],
+			"explorer/context": [
+				{
+					"command": "menu-contribution-test.explorer-context"
+				},
+				{
+					"submenu": "menu-contribution-test.submenu",
+					"when": "resourceExtname == .ts"
+				}
+			],
+			"scm/resourceFolder/context": [
+				{
+					"command": "menu-contribution-test.scm-resourceFolder-context"
+				}
+			],
+			"scm/resourceGroup/context": [
+				{
+					"command": "menu-contribution-test.scm-resourceGroup-context"
+				}
+			],
+			"scm/resourceState/context": [
+				{
+					"command": "menu-contribution-test.scm-resourceState-context"
+				}
+			],
+			"scm/title": [
+				{
+					"command": "menu-contribution-test.scm-title"
+				},
+				{
+					"submenu": "menu-contribution-test.submenu",
+					"when": "resourceExtname == .ts"
+				}
+			],
+			"timeline/item/context": [
+				{
+					"command": "menu-contribution-test.timeline-item-context"
+				}
+			],
+			"view/item/context": [
+				{
+					"command": "menu-contribution-test.view-item-context"
+				}
+			],
+			"view/title": [
+				{
+					"command": "menu-contribution-test.view-title"
+				},
+				{
+					"command": "menu-contribution-test.thumbsDown",
+					"when": "menu-contribution-test.contextKey != thumbsDown",
+					"group": "navigation"
+				},
+				{
+					"command": "menu-contribution-test.thumbsUp",
+					"when": "menu-contribution-test.contextKey == thumbsDown",
+					"group": "navigation"
+				}
+			],
+			"menu-contribution-test.submenu": [
+				{
+					"command": "menu-contribution-test.menu-contribution-test.submenu"
+				}
+			]
+		},
+		"submenus": [
+			{
+				"icon": "$(beaker)",
+				"id": "menu-contribution-test.submenu",
+				"label": "Test Submenu"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.68.0",
+		"@types/glob": "^7.2.0",
+		"@types/mocha": "^9.0.0",
+		"@types/node": "14.x",
+		"@typescript-eslint/eslint-plugin": "^5.9.1",
+		"@typescript-eslint/parser": "^5.9.1",
+		"eslint": "^8.6.0",
+		"glob": "^7.2.0",
+		"mocha": "^9.1.3",
+		"typescript": "^4.5.4",
+		"@vscode/test-electron": "^2.0.3"
+	}
+}
