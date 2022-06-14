@@ -157,6 +157,11 @@
 			"editor/title": [
 				{
 					"command": "menu-contribution-test.editor-title"
+				},
+				{
+					"submenu": "menu-contribution-test.submenu",
+					"when": "resourceExtname == .ts",
+					"group": "navigation"
 				}
 			],
 			"editor/title/context": [
@@ -230,7 +235,7 @@
 		},
 		"submenus": [
 			{
-				"icon": "$(beaker)",
+				"icon": "$(beaker-stop)",
 				"id": "menu-contribution-test.submenu",
 				"label": "Test Submenu"
 			}
