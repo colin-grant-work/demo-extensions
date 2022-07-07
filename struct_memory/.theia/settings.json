@@ -1,0 +1,4 @@
+{
+    "lldb.verboseLogging": true,
+    "lldb.rpcServer": null
+}
