@@ -1,6 +1,7 @@
 {
 	"name": "uri-normalization-problems",
 	"displayName": "uri-normalization-problems",
+	"publisher": "colin-grant",
 	"description": "Demonstrate problems with URI normalization in Theia",
 	"version": "0.0.1",
 	"engines": {
