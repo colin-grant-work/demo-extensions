@@ -1,6 +1,7 @@
 {
 	"name": "code-action-demo",
 	"displayName": "code-action-demo",
+	"publisher": "colin-grant",
 	"description": "tests-code-action-provider-with-args",
 	"version": "0.0.1",
 	"engines": {

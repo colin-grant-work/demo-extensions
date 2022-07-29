@@ -1,7 +1,7 @@
 {
 	"name": "extension-preference-access",
 	"displayName": "extension-preference-access",
-	"publisher": "cjg",
+	"publisher": "colin-grant",
 	"description": "Tests the `affects` check and plugins' ability to access language-overridden preferences",
 	"version": "0.0.1",
 	"engines": {
