@@ -210,6 +210,16 @@
 			"view/item/context": [
 				{
 					"command": "menu-contribution-test.view-item-context"
+				},
+				{
+					"command": "menu-contribution-test.thumbsDown",
+					"when": "menu-contribution-test.contextKey != thumbsDown",
+					"group": "inline"
+				},
+				{
+					"command": "menu-contribution-test.thumbsUp",
+					"when": "menu-contribution-test.contextKey == thumbsDown",
+					"group": "inline"
 				}
 			],
 			"view/title": [
@@ -235,7 +245,7 @@
 		},
 		"submenus": [
 			{
-				"icon": "$(beaker-stop)",
+				"icon": "$(beaker)",
 				"id": "menu-contribution-test.submenu",
 				"label": "Test Submenu"
 			}

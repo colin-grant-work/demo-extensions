@@ -38,6 +38,12 @@ console.log(JSON.stringify({
             if (current === 'editor/title') {
                 accumulated[current].push({ submenu: 'menu-contribution-test.submenu', when: 'resourceExtname == .ts', group: 'navigation' });
             }
+            if (current === 'view/item/context') {
+                accumulated[current].push(
+                    { command: 'menu-contribution-test.thumbsDown', when: 'menu-contribution-test.contextKey != thumbsDown', group: 'inline' },
+                    { command: 'menu-contribution-test.thumbsUp', when: 'menu-contribution-test.contextKey == thumbsDown', group: 'inline' }
+                );
+            }
             return accumulated;
         }, Object.create(null)),
         submenus: [{ icon: '$(beaker)', id: 'menu-contribution-test.submenu', label: 'Test Submenu' }]
