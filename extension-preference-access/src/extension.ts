@@ -56,6 +56,14 @@ export function activate(context: vscode.ExtensionContext) {
 		const value = vscode.workspace.getConfiguration('peaSoup').get('secretIngredients');
 		vscode.window.showInformationMessage(`The value of 'peaSoup.secretIngredients' is: ${JSON.stringify(value)}`);
 	}));
+	context.subscriptions.push(vscode.commands.registerCommand('access-preferences-top-level', async () => {
+		const topLevelConfig = vscode.workspace.getConfiguration();
+		console.log(topLevelConfig.inspect("editor.fontSize"));
+		await topLevelConfig.update("editor.fontSize", 8, vscode.ConfigurationTarget.Global);
+		const editorConfig = vscode.workspace.getConfiguration("editor");
+		console.log(editorConfig.inspect("tabSize"));
+		await editorConfig.update("tabSize", 8, vscode.ConfigurationTarget.Global);
+	}));
 }
 
 const enum Override {

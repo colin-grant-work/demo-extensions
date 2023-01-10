@@ -23,7 +23,8 @@
 		"onCommand:check-config-no-override",
 		"onCommand:check-config-with-override",
 		"onCommand:check-config-with-forced-override",
-		"onCommand:access-non-existent-preference"
+		"onCommand:access-non-existent-preference",
+		"onCommand:access-preferences-top-level"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -56,6 +57,11 @@
 			{
 				"command": "access-non-existent-preference",
 				"title": "Access a (probably) non-existent preference",
+				"category": "Plugin Configuration Test"
+			},
+			{
+				"command": "access-preferences-top-level",
+				"title": "Access preferences at the top level",
 				"category": "Plugin Configuration Test"
 			}
 		],
